@@ -14,6 +14,13 @@ end
 def new
   @group = Group.new
 end
+
+def update
+  @group = Group.find(params[:id])
+  @group = Group.update(groups_params)
+  redirect_to groups_path,notice: "Update Success"
+end
+
 def create
   @group = Group.new(group_params)
   @group.save
