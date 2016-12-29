@@ -22,6 +22,7 @@ if  @group.update(group_params)
 else
   render :edit
 end
+end
 
 def destroy
   @group = Group.find(params[:id])
